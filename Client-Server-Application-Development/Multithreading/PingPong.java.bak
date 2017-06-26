@@ -1,0 +1,40 @@
+import java.io.IOException;
+
+class PingPong extends Thread
+{
+	String word;
+
+	public PingPong(String w) {
+		word = w;
+	}
+
+	public void run() {
+		try
+		{
+			while(true) {
+				System.out.print(word + "   ");
+				Thread.sleep(1000);
+			}
+		}
+		catch (InterruptedException e)
+		{
+			System.out.println("Exception Caught : " + e);
+		}
+	}
+
+	public static void main(String args[])
+	{
+		
+		Thread first = new PingPong("Ping");
+		Thread second = new PingPong("Pong");
+		
+		first.start();
+		second.start();
+	
+		System.out.println("Ending main().........");
+		return;
+			
+	}
+
+
+}
