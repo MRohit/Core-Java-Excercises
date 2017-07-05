@@ -1,7 +1,6 @@
 package Lab_12;
 
 import java.awt.Graphics;
-//import javax.swing.
 import javax.swing.JFrame;
 
 public class Problem_2 extends JFrame implements Runnable{
